@@ -42,7 +42,7 @@ public class MainActivity extends AppCompatActivity {
 //        });
 
 //        miVisorWeb = (WebView) findViewById(R.id.visorWebPOP);
-//        final WebSettings ajustesVisorWeb = miVisorWeb.getSettings();
+//                                                                             final WebSettings ajustesVisorWeb = miVisorWeb.getSettings();
 
 
 //        button=(Button)findViewById(R.id.buton1);
@@ -56,7 +56,7 @@ public class MainActivity extends AppCompatActivity {
 //        });
 
 
-//        ajustesVisorWeb.setJavaScriptEnabled(true);
+//                                                                                ajustesVisorWeb.setJavaScriptEnabled(true);
 //        miVisorWeb.setWebViewClient(new WebViewClient());
 //        miVisorWeb.loadUrl(url);
 
@@ -73,6 +73,10 @@ public class MainActivity extends AppCompatActivity {
 
 
         WebView wv=(WebView)myDialog.findViewById(R.id.visorWebPOP);
+
+        final WebSettings ajustesVisorWeb = wv.getSettings();
+        ajustesVisorWeb.setJavaScriptEnabled(true);
+
         wv.loadUrl("https://www.google.com/");
         wv.setWebViewClient(new WebViewClient() {
             @Override
@@ -81,6 +85,9 @@ public class MainActivity extends AppCompatActivity {
 
                 return true;
             }
+
+
+
         });
 
 
